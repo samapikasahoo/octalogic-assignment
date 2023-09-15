@@ -1,6 +1,7 @@
 // src/components/SignIn.tsx
 import React, { useState } from 'react';
-import { useNavigate , Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Admin from './Admin';
 
 const SignIn: React.FC = () => {
     const navigate = useNavigate()
@@ -34,6 +35,7 @@ const SignIn: React.FC = () => {
 
   return (
     <div className="max-w-md mx-auto my-10 p-5 bg-green-200  rounded shadow-lg">
+      <Admin/>
       <h2 className="text-2xl font-semibold mb-4">Sign In</h2>
       <form onSubmit={handleSignIn}>
         <div className="mb-4">
@@ -66,9 +68,7 @@ const SignIn: React.FC = () => {
         </button>
         <div className="loginForm2">
           Don't have an account ?
-          <Link to="/signup">
-            <span style={{ color: "blue", cursor: "pointer" }}>Sign Up</span>
-          </Link>
+         
         </div>
       </form>
     </div>
